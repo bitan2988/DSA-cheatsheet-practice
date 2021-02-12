@@ -1,0 +1,30 @@
+//DIAMETER OF A TREE    --> sum of the longest left subtree and the longest right sub tree
+//The max distance between 2 leaves
+//It may or may not pass  through the root node
+//We will  have  to calculate the length of right sub tree and
+//left subtree and then add them to get the longest path that pass
+//through that node
+
+int diameter(nod* root, int &res){
+	if(root==NULL){
+		return 0;
+	}
+	int l = diameter(root->left, res);
+	int r = diameter(root->right, res);
+
+	temp = 1+max(l, r);   //will pass this value to upper node 
+	res = max(res, 1+l+r);   //store the max path 
+
+	return temp;
+
+}
+
+int main(){
+	int res = INT_MIN;
+	diameter(root, res);
+	return res;
+}
+
+
+
+
