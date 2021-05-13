@@ -1,0 +1,1 @@
+Greedy algorithms as the name suggest is an optimization approach which can be used in places where we want to claculate the minimum/maximum of an amount
